@@ -1,0 +1,10 @@
+command under the directory which you want to let git control
+$ git init
+
+This can show the status
+$ git status
+
+This can put the file to stagging area, which can be tracked by git now
+$ git add <file name>  // without <>
+$ git add --all / $ git add .  // add all the file
+$ git add *.html // add all the html file

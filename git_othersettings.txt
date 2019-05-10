@@ -1,0 +1,10 @@
+$ git config --global alias.co checkout // $ git co -> $ git checkout
+
+// $ git l -> $ git log --oneline --graph 
+$ git config --global alias.l "log --oneline --graph"
+
+
+$ git config --global alias.ls 'log --graph --pretty=format: "%h <%an> %ar %s"'
+
+
+// all the change will be in the .gitconfig

@@ -1,0 +1,26 @@
+$ git config --global user.name "__________" // setting the git user
+$ git config --global user.email "_________" // setting the git user's email
+
+$ git config --list // this command can see your user setting
+/*
+user.name=Tony Yang
+user.email=a29831968@gmail.com
+......
+...
+..
+*/
+
+/*
+all of the setting will be in the file .gitconfig
+This file locate under the home
+$ vim ~/.gitconfig
+You can use vim editor to edit setting directly inside this file.
+*/
+
+
+/*
+If you want to set project to other user instead of global one
+you can go to that project and set
+$ git config --local user.name "_____"
+$ git config --local user.email "_____"
+*/
