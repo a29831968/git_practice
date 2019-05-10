@@ -4,7 +4,21 @@ $ git init
 This can show the status
 $ git status
 
-This can put the file to stagging area, which can be tracked by git now
+This can put the file to staging area, which can be tracked by git now
 $ git add <file name>  // without <>
 $ git add --all / $ git add .  // add all the file
 $ git add *.html // add all the html file
+
+
+|-------Working Directory : file is working here
+|
+->------$ git add
+|
+|-------Staging Area : Put before get into local Repository
+|
+->------$ git commit 
+|
+|-------Repository : Store
+
+This command can directly commit 
+$ git commit -a -m "_______"
