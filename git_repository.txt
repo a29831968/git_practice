@@ -1,3 +1,5 @@
+<Section 1. Procedure to Local Repository>
+
 command under the directory which you want to let git control
 $ git init
 
@@ -22,3 +24,26 @@ $ git add *.html // add all the html file
 
 This command can directly commit 
 $ git commit -a -m "_______"
+
+<Section 2. Check the Status>
+
+Can show basic information, when, who what
+$ git log 
+
+Can show a graph in one line
+$ git log --oneline --grapgh
+
+Can find the file which is commit by ___
+$ git log --oneline --graph --author="___"
+
+Can find the commit that has show ____
+$ git log --grep="___"
+
+Can find the file that contains ___ in its content
+$ git log -S "___"
+
+Can find the file since ~ until
+$ git log --oneline --since="00:00:00" --until="12:00:00"
+$ git log --oneline --since="00:00:00" --until="12:00:00" --after="2017-01"
+
+>> All git <main command> <--custom function>
