@@ -1,4 +1,4 @@
-# recover the file which is not deleted and also unpushed yet
+# recover the file which is not deleted and also uncommited yet
 
 # recover certain file
 $ git checkout <filename>
@@ -9,4 +9,11 @@ $ git checkout .
 # recover the file to previous No. version
 $ git checkout HEAD~NO
 
-2 --- 1 --- HEAD
+
+# unstaged the change
+$ rm file.txt
+$ git add file.txt  
+
+Now you want to discard the change
+$ git reset HEAD <filename or .>
+$ git chechout <filename or .>
