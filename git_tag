@@ -1,0 +1,16 @@
+<tag>
+1. lightweight tag, no msg, use for temporary
+2. annotated tag, use for version release
+
+lightweight tag
+$ git tag <tagName> <SHA-1> // if no SHA-1 will tag in current commit 
+
+
+annotated tag
+$ git tag <tagName> <SHA-1> -a -m "msg"
+
+<Show tag msg>
+$ git show <tagname>
+
+<Delete tag>
+$ git tag -d <tagname>
