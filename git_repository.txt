@@ -46,4 +46,28 @@ Can find the file since ~ until
 $ git log --oneline --since="00:00:00" --until="12:00:00"
 $ git log --oneline --since="00:00:00" --until="12:00:00" --after="2017-01"
 
+
+This command can let the file untracked
+$ git rm <filename> --cached
 >> All git <main command> <--custom function>
+
+<Section 3. Modify the commit message>
+
+Method 1:
+// This command can only modify the most recently commit message
+$ git commit --amend -m "message"
+
+<Section 4. Modify commit file>
+
+if you modify something really small, and you don't want to make another new commit,
+you can add that file first.
+Ex: 
+// you have modified the test.html
+$ git add test.html
+$ git commit --amend --no-edit
+
+<Section 5. Add Empty Directory in to git>
+Ex:
+$ mkdir images         // create a directory
+$ touch images/.keep   // create .keep file in directory.
+
