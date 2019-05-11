@@ -2,9 +2,51 @@
 $ git commit --amend -m "msg"
 
 <Modify not only previous commit msg>
-// you can start modify the msg from HEAD~<SHA-1>
+# you can start modify the msg from HEAD~<SHA-1>
 $ git rebase -i <SHA-1>
-// And then you just need to replace "pick -> reword"
-// which means you want to changed the msg
-// If you want to cancel the rebase 
+# And then you just need to replace "pick -> reword"
+# which means you want to changed the msg
+# If you want to cancel the rebase 
 $ git reset ORIG_HEAD --hard
+p.s. Rebase will also rebase the tree structure
+
+<Merge multiple commit msg together>
+$ git rebase -i <SHA-1>
+# replace "pick -> squash"
+# go to vim edit msg 
+
+<Partition single commit into multiple>
+$ git rebase -i <SHA-1>
+# replace "pick -> edit"
+# rebase will stop at <SHA-1>
+$ git reset HEAD^
+# do your modification
+# when you use rebase, the last step will always be
+$ git rebase --continue
+
+
+<Add new commit in the middle of the commit>
+# similer to the partition
+$ git rebase -i <SHA-1>
+# "pick -> edit"
+$ git touch ...
+$ git add ...
+$ git commit -m ".."
+$ git rebase --continue
+
+<Modulate the order of the commit>
+$ git rebase -i <SHA-1>
+edit the order inside the vim
+
+<Delete the commit>
+$ git rebase -i <SHA-1>
+delete the commit inside the vim or "pick -> drop"
+
+<Revert, Rebase and Reset>
+# create another commit to get to your previous condition
+$ git revert HEAD --no-edit 
+
+| command | changed history (y/n) | others
+| Reset   |         y             | assign current status to the reset commit, use when unpushed 
+| Rebase  |         y             | it is convenient for create, modify and delete, use when unpushed
+| Revert  |         n             | Use when pushed or other condition that Reset and Rebase unavaliable
