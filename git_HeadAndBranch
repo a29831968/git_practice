@@ -27,6 +27,54 @@ $ git branch -D _____
 # Switch to another branch
 $ git checkout branch1
 
+# Merge branch
+$ git branch ____ // you can merge this branch into your current branch
+
+# Merge the branch DO NOT WANT TO USE fast forward
+$ git merge cat --no-ff
+
+# When you delete the branch that you havn't merge
+# You just need to give the branch a new name
+# Since you are not truely deleted the files, only canceled the "TAG"
+$ git branch <branchname> <SHA-1>
+
+# if you forgot the SHA-1, this command can see the record
+$ git reflog 
+
+<Rebase> !!!!
+# re base, if you are in branch A
+$ git rebase B //  
+A B	A
+| | --->|	
+|/	|
+	|B
+	|
+	
+# If you want to regret the rebase
+$ git reflog // to see the SHA-1
+$ git reset <SHA-1> --hard
+or
+# 
+$ git reset ORIG_HEAD
+
+<Conflict>
+# use git status to see conflict
+# after modified you need to 
+$ git add ____ / $ git add .
+$ git commit -m ""   / or if you use rebase -> $ git rebase --continue
+
+## if the conflict happens in picture not text
+$ git checkout --ours <filename>    //use current branch
+$ git checkout --theirs <filename>  //use other branch
+
+<Create a new Branch in one of the past commit>
+$ git checkout <SHA-1> // detached Head, so you need to create a branch
+$ git checkout -b <branchname> // named it and go to it
+or
+$ git branch bird <SHA-1> // create a new branch at <SHA-1>
+or
+$ git checkout -b bird <SHA-1> // create, name and go to it.
+
 <Detached HEAD>
 This situation will happen in three conditions
 1. Checkout to a commit that no branch is pointing at it
