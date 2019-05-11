@@ -10,10 +10,9 @@ $ git checkout .
 $ git checkout HEAD~NO
 
 
-# unstaged the change
+# unstaged the file deleted
 $ rm file.txt
 $ git add file.txt  
-
-Now you want to discard the change
+Now you want to discard the deleted step of the file 
 $ git reset HEAD <filename or .>
 $ git chechout <filename or .>
