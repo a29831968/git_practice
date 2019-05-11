@@ -1,0 +1,38 @@
+<HEAD>
+Is the pointer will point to where your branch are
+
+# show where your head at
+$ cat .git/HEAD
+ref: refs/heads/master
+
+$ cat .git/refs/heads/master
+e125rtchjfkgblgtftfvgyhujikolvfisufydvuhijw
+
+<branch>
+# show all your branches
+$ git branch
+
+# create a branch
+$ git branch ______  // ______ branch name
+
+# rename the branch, cat to tiger
+$ git branch -m cat tiger
+
+# delete the branch (all ready merged)
+$ git branch -d _____ // _____ branch name
+
+# delete the branch no matters what
+$ git branch -D _____
+
+# Switch to another branch
+$ git checkout branch1
+
+<Detached HEAD>
+This situation will happen in three conditions
+1. Checkout to a commit that no branch is pointing at it
+2. Rebase
+3. Checkout to the remote branch
+
+# you only need to name a branch and point to it
+$ git branch <branchname> b6d204e
+$ git checkout -b <branch> b6d204e // no longer Detached HEAD
