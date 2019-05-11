@@ -1,0 +1,10 @@
+<Modify only previous commit msg>
+$ git commit --amend -m "msg"
+
+<Modify not only previous commit msg>
+// you can start modify the msg from HEAD~<SHA-1>
+$ git rebase -i <SHA-1>
+// And then you just need to replace "pick -> reword"
+// which means you want to changed the msg
+// If you want to cancel the rebase 
+$ git reset ORIG_HEAD --hard
