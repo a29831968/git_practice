@@ -1,0 +1,22 @@
+<Reset>
+
+# go to the one before HEAD
+$ git reset HEAD^(master^) or $ git reset HEAD~1
+
+# go to the x before HEAD
+$ git reset HEAD~x
+
+# go to 85e7e30 
+$ git reset 85e7e30
+
+After reset, there are (files/deleted steps) that are departed by you 
+So, there are three modes 
+
+--mixed
+This is default mode, and this will make your departed files go to the work directory
+
+--soft
+This will make your files go to the staging area
+
+--hard
+Discard all the files departed.
