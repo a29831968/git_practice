@@ -49,7 +49,6 @@ $ git log --oneline --since="00:00:00" --until="12:00:00" --after="2017-01"
 
 This command can let the file untracked
 $ git rm <filename> --cached
->> All git <main command> <--custom function>
 
 <Section 3. Modify the commit message>
 
@@ -71,3 +70,19 @@ Ex:
 $ mkdir images         // create a directory
 $ touch images/.keep   // create .keep file in directory.
 
+
+<Section 6. .gitignore>
+If you do not want to the file to be tracked, 
+you can create .gitignore under the project.
+
+$ touch .gitignore
+
+And edit the file.
+Ex: (add) test.html in the file.
+Then this file won't be tracked at all.
+
+If you want to clean the file which is ignored
+$ git clean -fX
+
+p.s. if the file is already created before the .gitignore,
+then the file won't be ignored.
