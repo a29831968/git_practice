@@ -84,5 +84,10 @@ Then this file won't be tracked at all.
 If you want to clean the file which is ignored
 $ git clean -fX
 
-p.s. if the file is already created before the .gitignore,
+p.s. if the file is already tracked(add) before the .gitignore,
 then the file won't be ignored.
+can use 
+
+$ git rm filename --cached 
+
+to untracked

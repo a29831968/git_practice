@@ -1,0 +1,8 @@
+<Section 1. Show the commit of certain file>
+# This can show the filename's commit record
+$ git log <filename>
+
+# This can show what did you do in every commit
+$ git log -p <filename>
+
+<Section 2.>
