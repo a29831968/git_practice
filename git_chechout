@@ -1,0 +1,12 @@
+# recover the file which is not deleted and also unpushed yet
+
+# recover certain file
+$ git checkout <filename>
+
+# recover all files
+$ git checkout .
+
+# recover the file to previous No. version
+$ git checkout HEAD~NO
+
+2 --- 1 --- HEAD
