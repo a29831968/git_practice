@@ -1,2 +1,10 @@
 <Pull Request>
-This line is for practice
+
+1. Find the interested project 
+2. press fork, which is at the right of top screen
+3. $ git clone <SSH/HTTPS>	// clone to local, and modified
+4. $ git add .
+5. $ git commit -m ""
+6. $ git push
+7. Press <New pull request>	// create PR to author
+8. Author can choose to receive and merge to its

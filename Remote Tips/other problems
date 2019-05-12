@@ -8,3 +8,34 @@ $ git push
 
 Solution 2 :
 $ git push -f	// this is force
+
+<Want to update to the newest version that you previously work>
+# When you fork the project and send the PR, there might be some other
+# people they have already send PR and be received
+# so you need to update to your local
+
+Solution 1 :
+Delete the one you fork and before and fork again
+
+Solution 2 :
+$ git remote -v	//s show all the remote node you have set up
+$ git remote add upstream <HTTPS/SSH>	// another remote node to Author's project
+$ git fetch upstream	// fetch the commit
+$ git merge upstream/master
+
+$ git push origin master	// this depends on if you want to update the project on your GitHub
+
+
+<Delete Remote Branches>
+$ git push origin :cat
+# Which is
+$ git push origin master:cat	// without master
+# Just like you push a empty branch
+
+
+<$ git push -f>
+No matter what, just push it.
+But, you can goto the setting to choose what branch you want to protect
+And if you want to save the file, just let the peope who has previous commit record
+$ git push -f 
+again
