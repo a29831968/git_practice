@@ -20,4 +20,33 @@ $ git stash drop stash@{}	// get delete file
 $ git cherry-pick <SHA-1>		// pick one commit from other branch
 $ git cherry-pick <SHA-1> <SHA-1> 	// pick multiple commits
 
-$ git cherry-pick <SHA-1> --no-commit	// pick, but put into work directory
+$ git cherry-pick <SHA-1> --no-commit	// pick, but put into staging area
+
+<Condition 3>
+# if you want to delete certain file while you alreay pushed long time ago
+Solution 1:
+$ git rebase -i <SHA-1>		// you can modify one by one
+
+Solution 2:
+$ git filter-branch --tree-filter "rm -f <file>"	// config/database.yml
+> filter-branch : checkout to every commit
+> --tree-filter : allows you to execute your command in every commit, here is rm
+
+# if you have already pushed
+$ git push -f		// to cover the previous push history
+# if you want to recover from filter-branch
+$ git reset refs/original/refs/head/master --hard
+
+<Condition 4>
+# if you want to totally delete something
+Solution 1: 
+delete .git
+
+Solution 2:
+$ git filter-branch -f --tree-filter "rm -f <>"
+$ rm .git/refs/original/refs/head/master
+$ git reflog expire --all --expire=now	// expire right now
+$ git fsck --unreachable		// clean unreachable file
+$ git gc --prune=now			// recycle
+$ git fsck				// This is to check all done
+$ git push -f				// if you already pushed to remote
