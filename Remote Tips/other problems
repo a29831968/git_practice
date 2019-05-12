@@ -1,0 +1,10 @@
+<Can not push>
+# while the remote is newer than your local
+
+Solution 1 :
+$ git pull (--rebase)
+# if there is no conflict, then you can push
+$ git push
+
+Solution 2 :
+$ git push -f	// this is force

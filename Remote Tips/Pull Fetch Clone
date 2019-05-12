@@ -11,3 +11,6 @@ $ git pull
 $ git pull --rebase	// this can ommit the extra commit that is for merge
 
 <Clone>
+# while you see some project that you are interested
+$ git clone <HTTPS / SSH> 
+$ git clone <HTTPS / SSH> <newnameforit>
