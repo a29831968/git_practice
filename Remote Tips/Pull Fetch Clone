@@ -1,0 +1,13 @@
+<Fetch>
+# if the remote commit is ahead of your local commit 
+$ git fetch	// this will drag something from remote
+$ git merge origin/master	// local HEAD move to the origin/master
+
+<Pull>
+# fetch + merge
+$ git pull
+
+<Rebase>
+$ git pull --rebase	// this can ommit the extra commit that is for merge
+
+<Clone>
