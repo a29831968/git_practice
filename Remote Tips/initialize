@@ -1,0 +1,24 @@
+step 1:
+Create a new Repository in GitHub
+
+if you are new -> step2
+if you already has existing repository to push -> step3
+
+
+step 2:
+$ echo "# practice-git" >> README.md
+$ git init
+$ git add .
+$ git commit -m "First commit"
+
+
+step3:
+$ git remote add origin <SSH / HTTPS>
+$ git push -u origin master
+
+# git remote : About to use Remote Command
+# git remote add origin <SSH/HTTPS>	// add a node named origin, which represent <SSH / Https>
+# git push -u origin master	
+// push master to origin/master, if there is no master create one
+// -u which means upstream, 
+$ git push -u origin master	// local master will track origin/master
