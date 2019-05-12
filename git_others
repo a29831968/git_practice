@@ -1,0 +1,23 @@
+<Condition 1>
+# You are asked to do other task while you are working on the other one.
+
+Solution 1:
+$ git add -all
+$ git commit -m "not finished yet."
+$ git reset HEAD^ (Remember not using --hard)
+
+Solution 2:
+$ git add -all    
+$ git stash			// only can stash tracked files
+$ git stash list		// show what you stashed		
+$ git stash pop stash@{}	// pop stash file back to work, and delete it
+$ git stash apply stash@{}	// get the stash file, but not delete it
+$ git stash drop stash@{}	// get delete file
+
+
+<Condition 2>
+# you only want to pick some commit from other branch
+$ git cherry-pick <SHA-1>		// pick one commit from other branch
+$ git cherry-pick <SHA-1> <SHA-1> 	// pick multiple commits
+
+$ git cherry-pick <SHA-1> --no-commit	// pick, but put into work directory
